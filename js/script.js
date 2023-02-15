@@ -49,5 +49,5 @@ for(let i = 0; i < clientes.length; i++){ //RODA UM FOR PARA VARRER O ARRAY E LE
     console.log(quant+", "+preco+" Valor Total: R$ "+ (quant * ajustado));
 
     //Joga esse valor total para a classe total do html, usando o queryselector, partindo do cliente (seleciona um elemento do cliente) atribuindo o valor total para a propriedade textContent do elemento
-    clientes[i].querySelector(".total").textContent = "R$ "+(quant * ajustado); 
+    clientes[i].querySelector(".total").textContent = (quant * ajustado).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}); 
 }
